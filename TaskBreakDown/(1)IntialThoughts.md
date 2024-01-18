@@ -32,14 +32,16 @@ maybe create a function to organize by due date?
 
 2. how to go about coding full stack app...
 
-A. set up back end first and get that running locally
-B. build UX for front end
-C. check for mobile responsiveness
-D. set up RESTful routes
-E. connect everything on the front end together
-F. double check design
-G. deploy back end
-H. deploy front end
+A. Brainstorm eveything
+B. Research UX Design - keep it simple, but add some fun
+C. set up back end first and get that running locally
+D. build UX for front end
+E. check for mobile responsiveness
+F. set up RESTful routes
+G. connect everything on the front end together
+H. double check design
+I. deploy back end
+J. deploy front end
 
 things to noodle on-
 how to incorporate reusable components
