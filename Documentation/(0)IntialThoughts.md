@@ -10,25 +10,27 @@
 
    **Page Breakdown:**
 
-   - **Home Page**
+- **On Log In**
+  show alert of the tasks that are due today in order of urgency
 
-     - Tabs at the top to toggle between tasks and add tasks.
-     - Upon login, show tasks that should be done for today in order of urgency.
-     - Main page showing tasks.
+  - **Home Page**
 
-   - **Add Task**
+    - Tabs at the top to toggle between tasks and add tasks.
+    - Main page showing tasks that should be done for today in order of urgency.
 
-     - Task name
-     - Task
-     - Due date
+  - **Add Task**
 
-   - **View Tasks**
-     - List of tasks
-     - Ability to check if the task is complete or not
-     - Delete tasks
-     - Due date
-     - Urgency level
-     - Maybe create a function to organize by due date?
+    - Task name
+    - Task
+    - Due date
+
+  - **View Tasks**
+    - List of tasks
+    - Ability to check if the task is complete or not
+    - Delete tasks
+    - Due date
+    - Urgency level
+    - Maybe create a function to organize by due date?
 
 2. **How to go about coding a full-stack app...**
 
@@ -55,3 +57,7 @@
 4. **Deploying**
    - Back end - deploy to Heroku
    - Front end - deploy to Netlify
+
+other...
+
+maybe for the reminder have the date save in local storage and then have a function that checks the date and if it is not the same as the date in local storage then it will show the reminder.
