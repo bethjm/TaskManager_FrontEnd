@@ -9,11 +9,7 @@ B. **Research UX Design**
 
 C. **Set Up Back End Locally**
 
-- Get the back end running on the local environment.
-
 D. **Build UX for Front End**
-
-- Develop the user interface for the front end.
 
 E. **Check for Mobile Responsiveness**
 
