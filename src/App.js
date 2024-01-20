@@ -14,10 +14,9 @@ function App() {
       <div className="App">
         <Router>
           <Routes>
-            <Route path="/" element={<MainPage />} />
+            <Route path="/" element={<ViewAllPage />} />
             <Route path="/api/tasks/addnew" element={<AddTaskPage />} />
             <Route path="/api/tasks/viewday" element={<ViewDayPage />} />
-            <Route path="/api/tasks/viewall" element={<ViewAllPage />} />
           </Routes>
         </Router>
       </div>
