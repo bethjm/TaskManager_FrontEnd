@@ -17,28 +17,14 @@ E. **Check for Mobile Responsiveness**
 
 F. **Set Up RESTful Routes**
 
-- Implement RESTful routes for effective communication.
-
 G. **Connect Everything on the Front End**
-
-- Establish connections and interactions within the front-end components.
 
 H. **Double Check Design**
 
-- Review and validate the design for consistency and usability.
-
 I. **Create READMEs for Front End and Back End**
-
-- Prepare detailed README files for both the front end and back end.
 
 J. **Link READMEs in the main README.md**
 
-- Provide links to the separate READMEs in the main README.md file.
-
 K. **Deploy Back End**
 
-- Deploy the back end of the application.
-
 L. **Deploy Front End**
-
-- Deploy the front end of the application.
