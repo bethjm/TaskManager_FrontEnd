@@ -9,7 +9,7 @@ import Completed from "./Completed";
 import PrimaryButton from "../../UI/buttons/PrimaryButton";
 
 //receive data from viewall card here
-function ViewAllCard({ tasks }) {
+function ViewAllCard({ tasks, onDeleteTask }) {
   return (
     <div className="ViewAllCard">
       <div className="ViewAllCard_Container">
@@ -27,7 +27,7 @@ function ViewAllCard({ tasks }) {
 
             <PrimaryButton>update</PrimaryButton>
             <br />
-            <PrimaryButton>delete</PrimaryButton>
+            <button onClick={() => onDeleteTask(task.id)}>delete</button>
           </div>
         ))}
       </div>
