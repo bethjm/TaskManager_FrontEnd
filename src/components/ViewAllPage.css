@@ -1,0 +1,9 @@
+.ViewAllPage {
+  background-color: var(--background-color);
+  height: 100%;
+}
+/* 
+.ViewAllPage .ViewAllPage_Container {
+} */
+@media screen and (max-width: 940px) {
+}

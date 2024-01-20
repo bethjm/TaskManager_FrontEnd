@@ -5,7 +5,7 @@ function Description({ children }) {
   return (
     <div className="Description">
       <div className="Description_Container">
-        <h2>{children}</h2>
+        <p>{children}</p>
       </div>
     </div>
   );

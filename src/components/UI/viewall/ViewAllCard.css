@@ -1,10 +1,46 @@
 .ViewAllCard {
-  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 6rem 2rem;
 }
 
 .ViewAllCard .ViewAllCard_Container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 60rem;
+  width: 80%;
 }
+.item1 {
+  grid-area: delete;
+}
+.item2 {
+  grid-area: done;
+}
+.item3 {
+  grid-area: title;
+}
+.item4 {
+  grid-area: date;
+  font-weight: bold;
+}
+.item5 {
+  grid-area: description;
+}
+
+.ViewAllCard .task_box {
+  height: 100%;
+  border-radius: 27px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: grid;
+  grid-template-areas:
+    "title done done date"
+    "title description description delete";
+  overflow: hidden;
+  padding: 0rem 1rem;
+}
+
+/* @media screen and (max-width: 940px) {
+  .ViewAllCard .task_box {
+    width: 20rem;
+  }
+} */

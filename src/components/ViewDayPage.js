@@ -1,6 +1,7 @@
 import React from "react";
 import "./ViewDayPage.css";
 
+//write code that checks the date of the task and if it matches todays date, then display here
 function ViewDayPage() {
   return (
     <div className="ViewDayPage">

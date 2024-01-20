@@ -5,7 +5,7 @@ function Date({ children }) {
   return (
     <div className="Date">
       <div className="Date_Container">
-        <h2>{children}</h2>
+        <p>{children}</p>
       </div>
     </div>
   );

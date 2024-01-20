@@ -40,7 +40,7 @@ function ViewAllPage() {
     }
   };
 
-  //edit completed
+  //edit completed option
   const handleUpdateTask = (id) => {
     const updatedTasks = tasks.map((task) => {
       if (task.id === id) {
@@ -55,7 +55,6 @@ function ViewAllPage() {
   return (
     <div className="ViewAllPage">
       <div className="ViewAllPage_Container">
-        <h1>hello from view all page</h1>
         <ViewAllCard
           tasks={tasks}
           onDeleteTask={handleDeleteTask}

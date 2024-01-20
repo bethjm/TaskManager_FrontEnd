@@ -5,7 +5,7 @@ function Header({ children }) {
   return (
     <div className="Header">
       <div className="Header_Container">
-        <h2>{children}</h2>
+        <p>{children}</p>
       </div>
     </div>
   );
