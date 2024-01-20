@@ -12,7 +12,6 @@ function App() {
   return (
     <TaskContextProvider>
       <div className="App">
-        <h1>hi from app</h1>
         <Router>
           <Routes>
             <Route path="/" element={<MainPage />} />
