@@ -1,13 +1,14 @@
 import { React, useEffect, useContext } from "react";
 import "./ViewAllPage.css";
 import { TaskContext } from "../context/TaskContext";
+import { useNavigate } from "react-router-dom";
 
 import Tasks from "../apis/Tasks";
 import ViewAllCard from "./UI/viewall/ViewAllCard";
 
 function ViewAllPage() {
-  const { tasks, setTasks } = useContext(TaskContext);
-
+  const { tasks, setTasks, onUpdateTaskCompletion } = useContext(TaskContext);
+  let navigate = useNavigate();
   //read
   useEffect(() => {
     (async () => {
@@ -39,11 +40,27 @@ function ViewAllPage() {
     }
   };
 
+  //edit completed
+  const handleUpdateTask = (id) => {
+    const updatedTasks = tasks.map((task) => {
+      if (task.id === id) {
+        return { ...task, completed: !task.completed };
+      }
+      return task;
+    });
+
+    setTasks(updatedTasks);
+  };
+
   return (
     <div className="ViewAllPage">
       <div className="ViewAllPage_Container">
         <h1>hello from view all page</h1>
-        <ViewAllCard tasks={tasks} onDeleteTask={handleDeleteTask} />
+        <ViewAllCard
+          tasks={tasks}
+          onDeleteTask={handleDeleteTask}
+          onUpdateTask={handleUpdateTask}
+        />
       </div>
     </div>
   );

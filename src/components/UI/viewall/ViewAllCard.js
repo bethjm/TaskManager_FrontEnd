@@ -9,7 +9,7 @@ import Completed from "./Completed";
 import PrimaryButton from "../../UI/buttons/PrimaryButton";
 
 //receive data from viewall card here
-function ViewAllCard({ tasks, onDeleteTask }) {
+function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
   return (
     <div className="ViewAllCard">
       <div className="ViewAllCard_Container">
@@ -19,13 +19,16 @@ function ViewAllCard({ tasks, onDeleteTask }) {
             <Description>{task.description}</Description>
             <Urgency>{task.urgency}</Urgency>
             <Date>{task.due_date}</Date>
-            {task.completed ? (
-              <Completed>yes</Completed>
-            ) : (
-              <Completed>no</Completed>
-            )}
 
-            <PrimaryButton>update</PrimaryButton>
+            <a onClick={() => onUpdateTask(task.id)}>
+              {task.completed ? (
+                <Completed>yes</Completed>
+              ) : (
+                <Completed>no</Completed>
+              )}
+            </a>
+            {/* maybe update feature here?have a different color button render depepdning on yes or no */}
+
             <br />
             <button onClick={() => onDeleteTask(task.id)}>delete</button>
           </div>
