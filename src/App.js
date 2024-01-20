@@ -1,10 +1,10 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import MainPage from "./components/MainPage";
 import ViewAllPage from "./components/ViewAllPage";
 import ViewDayPage from "./components/ViewDayPage";
 import AddTaskPage from "./components/AddTaskPage";
+import NavBar from "./components/UI/navbar/NavBar";
 
 import { TaskContextProvider } from "./context/TaskContext";
 
@@ -19,6 +19,7 @@ function App() {
             <Route path="/api/tasks/viewday" element={<ViewDayPage />} />
           </Routes>
         </Router>
+        <NavBar />
       </div>
     </TaskContextProvider>
   );
