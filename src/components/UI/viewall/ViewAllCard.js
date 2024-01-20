@@ -1,11 +1,28 @@
 import React from "react";
 import "./ViewAllCard.css";
+import { format } from "date-fns";
+import { enUS } from "date-fns/locale";
 
 import Header from "./Header";
 import Description from "./Description";
-import Date from "./Date";
+import DateComplete from "./DateComplete";
 import Completed from "./Completed";
 import PrimaryButton from "../../UI/buttons/PrimaryButton";
+
+import Delete from "../images/delete_svg.png";
+import Finished from "../images/checkbox.png";
+import NotFinished from "../images/non_checkbox.png";
+
+const formatDate = (rawDate) => {
+  if (!rawDate) {
+    return "";
+    // in case data is not goos
+  }
+
+  //code to show only day and month - I want year from the backend to check fro a feature
+  const formattedDate = format(new Date(rawDate), "MMMM d", { locale: enUS }); // Adjust the format as needed
+  return formattedDate;
+};
 
 //receive data from viewall card here
 function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
@@ -38,9 +55,9 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
               <div key={task.id} className="task_box" style={taskStyle}>
                 <a onClick={() => onUpdateTask(task.id)} className="item3">
                   {task.completed ? (
-                    <Completed>yes</Completed>
+                    <img src={Finished} />
                   ) : (
-                    <Completed>no</Completed>
+                    <img src={NotFinished} />
                   )}
                 </a>
                 <a className="item2">
@@ -51,10 +68,10 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
                 </a>
                 <a className="item4">
                   {/* {task.due_date} need to fox on backend to only show month and date*/}
-                  <Date>date</Date>
+                  <DateComplete>{formatDate(task.due_date)}</DateComplete>
                 </a>
                 <a onClick={() => onDeleteTask(task.id)} className="item1">
-                  <p>delete</p>
+                  <img src={Delete} />
                 </a>
               </div>
             );

@@ -1,6 +1,7 @@
 .ViewAllPage {
   background-color: var(--background-color);
   height: 100%;
+  overflow-y: scroll;
 }
 /* 
 .ViewAllPage .ViewAllPage_Container {
