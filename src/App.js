@@ -5,6 +5,7 @@ import MainPage from "./components/MainPage";
 import UpdatePage from "./components/UpdatePage";
 import ViewAllPage from "./components/ViewAllPage";
 import ViewDayPage from "./components/ViewDayPage";
+import AddTaskPage from "./components/AddTaskPage";
 
 import { TaskContextProvider } from "./context/TaskContext";
 
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="/api/tasks/:id/update" element={<UpdatePage />} />
+            <Route path="/api/tasks/addnew" element={<AddTaskPage />} />
             <Route path="/api/tasks/viewday" element={<ViewDayPage />} />
             <Route path="/api/tasks/viewall" element={<ViewAllPage />} />
           </Routes>

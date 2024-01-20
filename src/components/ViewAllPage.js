@@ -24,7 +24,6 @@ function ViewAllPage() {
     <div className="ViewAllPage">
       <div className="ViewAllPage_Container">
         <h1>hello from view all page</h1>
-        {/* map over this to show all the things, send data to view all card */}
         <ViewAllCard tasks={tasks} />
       </div>
     </div>
