@@ -9,16 +9,26 @@ import Date from "./Date";
 import PrimaryButton from "../../UI/buttons/PrimaryButton";
 
 //receive data from viewall card here
-function ViewAllCard() {
+function ViewAllCard({ tasks }) {
+  //   console.log("TASKS FROM VIEW CALL CAAAARRRDDDD", tasks);
+  //   console.log("TTRYING TO ACCESS IN DATA PIECES", tasks);
+
   return (
     <div className="ViewAllCard">
       <div className="ViewAllCard_Container">
-        <Header>header</Header>
-        <Description>decription</Description>
-        <Urgency>urgency</Urgency>
-        <Date>date</Date>
-
-        <PrimaryButton>update</PrimaryButton>
+        {tasks.map((task) => (
+          <div>
+            <Header>{task.name}</Header>
+            <Description>{task.decription}</Description>
+            <Urgency>{task.urgency}</Urgency>
+            {/* need to fox date on backend */}
+            <Date>{task.due_date}</Date>
+            {/* need to add compelted here */}
+            <PrimaryButton>update</PrimaryButton>
+            <br />
+            <PrimaryButton>delete</PrimaryButton>
+          </div>
+        ))}
       </div>
     </div>
   );
