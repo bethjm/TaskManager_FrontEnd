@@ -16,11 +16,9 @@ import NotFinished from "../images/non_checkbox.png";
 const formatDate = (rawDate) => {
   if (!rawDate) {
     return "";
-    // in case data is not goos
   }
-
-  //code to show only day and month - I want year from the backend to check fro a feature
-  const formattedDate = format(new Date(rawDate), "MMMM d", { locale: enUS }); // Adjust the format as needed
+  //in case of bad data
+  const formattedDate = format(new Date(rawDate), "M.d", { locale: enUS });
   return formattedDate;
 };
 
@@ -29,6 +27,8 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
   return (
     <div className="ViewAllCard">
       <div className="ViewAllCard_Container">
+        <h1>TO DO LIST</h1>
+        <hr />
         <div>
           {tasks.map((task) => {
             let color;
@@ -61,15 +61,16 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
                   )}
                 </a>
                 <a className="item2">
-                  <Header>{task.name}</Header>
+                  <Header>
+                    {task.name} due on {formatDate(task.due_date)}
+                  </Header>
                 </a>
                 <a class="item5">
                   <Description>{task.description}</Description>
                 </a>
-                <a className="item4">
-                  {/* {task.due_date} need to fox on backend to only show month and date*/}
+                {/* <a className="item4">
                   <DateComplete>{formatDate(task.due_date)}</DateComplete>
-                </a>
+                </a> */}
                 <a onClick={() => onDeleteTask(task.id)} className="item1">
                   <img src={Delete} />
                 </a>
