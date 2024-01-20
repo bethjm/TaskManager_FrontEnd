@@ -1,0 +1,10 @@
+.ViewAllCard {
+  margin-bottom: 5rem;
+}
+
+.ViewAllCard .ViewAllCard_Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 60rem;
+}
