@@ -1,9 +1,8 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useState, React } from "react";
 
 import ViewAllPage from "./components/ViewAllPage";
-import ViewDayPage from "./components/ViewDayPage";
 import AddTaskPage from "./components/AddTaskPage";
 import NavBar from "./components/UI/navbar/NavBar";
 
@@ -22,7 +21,6 @@ function App() {
               path="/api/tasks/addnew"
               element={<AddTaskPage setShowNavBar={setShowNavBar} />}
             />
-            <Route path="/api/tasks/viewday" element={<ViewDayPage />} />
           </Routes>
         </Router>
         {showNavBar && <NavBar />}

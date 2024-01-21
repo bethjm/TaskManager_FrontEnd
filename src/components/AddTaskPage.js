@@ -42,7 +42,7 @@ function AddTaskPage({ setShowNavBar }) {
         due_date: taskDueDate,
         completed: taskCompleted,
       });
-
+      //sends you back to the homepage after everything is sumbitted
       navigation("/");
 
       if (response.status === 201) {

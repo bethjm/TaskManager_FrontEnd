@@ -6,7 +6,8 @@ import Tasks from "../apis/Tasks";
 import ViewAllCard from "./UI/viewall/ViewAllCard";
 
 function ViewAllPage() {
-  const { tasks, setTasks, onUpdateTaskCompletion } = useContext(TaskContext);
+  const { tasks, setTasks } = useContext(TaskContext);
+
   //read
   useEffect(() => {
     (async () => {
