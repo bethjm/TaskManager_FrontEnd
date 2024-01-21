@@ -11,15 +11,16 @@ import Finished from "../images/checkbox.png";
 import NotFinished from "../images/non_checkbox.png";
 
 const formatDate = (rawDate) => {
+  //in case of bad data return empty string
   if (!rawDate) {
     return "";
   }
-  //in case of bad data
+
+  //reformats the date
   const formattedDate = format(new Date(rawDate), "M.d", { locale: enUS });
   return formattedDate;
 };
 
-//receive data from viewall card here
 function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
   return (
     <div className="ViewAllCard">
@@ -62,7 +63,7 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
                     {task.name}: {formatDate(task.due_date)}
                   </Header>
                 </a>
-                <a class="item5">
+                <a className="item5">
                   <Description>{task.description}</Description>
                 </a>
                 <a onClick={() => onDeleteTask(task.id)} className="item1">

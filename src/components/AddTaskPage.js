@@ -64,6 +64,8 @@ function AddTaskPage({ setShowNavBar }) {
       <h2>ADD ITEM</h2>
       <hr />
       <div className="CreatePage_Container">
+        {/* <h2>ADD ITEM</h2>
+        <hr /> */}
         <input
           className="taskName"
           placeholder="Title"

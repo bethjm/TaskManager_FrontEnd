@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState, React } from "react";
+import { useState, React, useEffect } from "react";
 
 import ViewAllPage from "./components/ViewAllPage";
 import AddTaskPage from "./components/AddTaskPage";

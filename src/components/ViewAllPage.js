@@ -15,11 +15,25 @@ function ViewAllPage() {
         const response = await Tasks.get(Tasks.baseURL);
         setTasks(response.data.rows);
         console.log(response.data.rows);
+        console.log("read the data");
       } catch (err) {
         console.log(err);
       }
     })();
   }, []);
+
+  // if (tasks.length >= 1) {
+  //   //storing the data in session storage
+  //   sessionStorage.setItem("key", "value");
+  //   console.log("MODAAAL");
+  //   //get the data
+  //   const storedValue = sessionStorage.getItem("key");
+  //   console.log("Stored Value:", storedValue);
+
+  //   //remove the data
+  //   sessionStorage.removeItem("key");
+  //   console.log("MODAAAL");
+  // }
 
   //delete
   const handleDeleteTask = async (id) => {
