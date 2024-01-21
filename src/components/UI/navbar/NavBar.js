@@ -10,10 +10,13 @@ function NavBar() {
       <div className="NavBar_Container">
         <div className="nav_icons">
           <a className="icon_container" href="/api/tasks/addnew">
-            <img src={Add} />
+            <img src={Add} alt={"an add button to bring you to the add page"} />
           </a>
           <a className="icon_container" href="/">
-            <img src={Home} />
+            <img
+              src={Home}
+              alt={"Small home icon to take you to the home page"}
+            />
           </a>
         </div>
       </div>

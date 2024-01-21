@@ -53,9 +53,17 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
               <div key={task.id} className="task_box" style={taskStyle}>
                 <a onClick={() => onUpdateTask(task.id)} className="item3">
                   {task.completed ? (
-                    <img src={Finished} />
+                    <img
+                      src={Finished}
+                      alt={"a box with a check in it to signify completed task"}
+                    />
                   ) : (
-                    <img src={NotFinished} />
+                    <img
+                      src={NotFinished}
+                      alt={
+                        "an epmty box without a check in it to signify incomplete task"
+                      }
+                    />
                   )}
                 </a>
                 <a className="item2">

@@ -121,10 +121,16 @@ function AddTaskPage({ setShowNavBar }) {
           <img
             id="checked_box"
             src={CheckBox}
+            alt={"a box with a check in it to signify completed task"}
             checked={taskCompleted}
             onChange={(e) => setTaskCompleted(e.target.checked)}
           />
-          <img src={NoCheck} />
+          <img
+            src={NoCheck}
+            alt={
+              "an epmty box without a check in it to signify incomplete task"
+            }
+          />
         </div>
 
         <button className="submit_button" type="submit" onClick={handleSubmit}>
