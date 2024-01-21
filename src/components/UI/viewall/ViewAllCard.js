@@ -5,9 +5,6 @@ import { enUS } from "date-fns/locale";
 
 import Header from "./Header";
 import Description from "./Description";
-import DateComplete from "./DateComplete";
-import Completed from "./Completed";
-import PrimaryButton from "../../UI/buttons/PrimaryButton";
 
 import Delete from "../images/delete_svg.png";
 import Finished from "../images/checkbox.png";
@@ -62,15 +59,12 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
                 </a>
                 <a className="item2">
                   <Header>
-                    {task.name} due on {formatDate(task.due_date)}
+                    {task.name}: {formatDate(task.due_date)}
                   </Header>
                 </a>
                 <a class="item5">
                   <Description>{task.description}</Description>
                 </a>
-                {/* <a className="item4">
-                  <DateComplete>{formatDate(task.due_date)}</DateComplete>
-                </a> */}
                 <a onClick={() => onDeleteTask(task.id)} className="item1">
                   <img src={Delete} />
                 </a>
