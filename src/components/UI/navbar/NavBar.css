@@ -1,0 +1,21 @@
+.NavBar {
+  height: 6rem;
+  background-color: #3e393a;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.NavBar .NavBar_Container {
+  display: flex;
+  justify-content: center;
+}
+
+.NavBar .nav_icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 2rem;
+  width: 30rem;
+}
