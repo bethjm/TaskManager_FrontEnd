@@ -1,6 +1,6 @@
 .NavBar {
   height: 6rem;
-  background-color: #3e393a;
+  background-color: #fd9998;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -16,6 +16,12 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 2rem;
+  padding: 0.9rem 1.5rem;
   width: 30rem;
+}
+
+.NavBar .icon_container {
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 40px;
+  padding: 1rem 1.3rem 1rem 1.3rem;
 }
