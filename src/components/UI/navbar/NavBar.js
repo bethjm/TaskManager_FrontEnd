@@ -4,7 +4,6 @@ import "./NavBar.css";
 import Add from "../images/add_sign.png";
 import Alert from "../images/Alert.png";
 import Today from "../images/Calendar.png";
-import Circle from "../images/circle.png";
 
 function NavBar() {
   return (

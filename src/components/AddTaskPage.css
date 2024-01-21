@@ -1,0 +1,195 @@
+.CreatePage {
+  height: 100vh;
+}
+
+.CreatePage h2 {
+  text-align: center;
+  background-color: #fdf7f8;
+}
+
+.CreatePage .CreatePage_Container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 80%;
+}
+
+hr {
+  height: 1.5px;
+  background-color: black;
+  border-color: black;
+  border-radius: 10px;
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+.CreatePage .taskName {
+  color: black;
+  background-color: #efff97;
+  width: 30rem;
+  height: 3rem;
+  border-radius: 18px;
+  padding-left: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.CreatePage .desc {
+  color: black;
+  background-color: #efff97;
+  width: 30rem;
+  height: 4rem;
+  border-radius: 18px;
+  padding-left: 10px;
+  border: none;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.CreatePage .due_date {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 30rem;
+  font-size: 2rem;
+}
+
+.CreatePage .date_selection {
+  background-color: #efff97;
+  width: 25rem;
+  height: 3rem;
+  border-radius: 18px;
+  border: none;
+  margin-bottom: 1rem;
+}
+
+#urgency_title {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.CreatePage .urgency_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#high_button {
+  background-color: #f68054;
+  width: 30rem;
+  height: 3rem;
+  border-radius: 18px;
+  border: none;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#high_button:active {
+  height: 4rem;
+}
+
+#medium_button {
+  background-color: #efff97;
+  width: 30rem;
+  height: 3rem;
+  border-radius: 18px;
+  border: none;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#medium_button:active {
+  height: 4rem;
+}
+
+#low_button {
+  background-color: #98ffd9;
+  width: 30rem;
+  height: 3rem;
+  border-radius: 18px;
+  border: none;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#low_button:active {
+  height: 4rem;
+}
+
+#completed_title {
+  font-size: 2rem;
+}
+
+.CreatePage .completed_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 12rem;
+  margin-bottom: 1rem;
+}
+
+.CreatePage .completed_box img {
+  height: 3rem;
+  width: 3rem;
+}
+
+#checked_box {
+  height: 3.5rem;
+  width: 3.5rem;
+}
+
+.CreatePage .completed_box img:active {
+  background-color: #fd9998;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 18px;
+}
+
+.CreatePage .submit_button {
+  height: 5rem;
+  width: 5rem;
+  border-radius: 60px;
+  border: none;
+  background-color: #fd9998;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  hr {
+    width: 20rem;
+  }
+  .CreatePage .taskName {
+    width: 20rem;
+  }
+  .CreatePage .desc {
+    width: 20rem;
+  }
+
+  .CreatePage .due_date {
+    width: 20rem;
+  }
+  .CreatePage .date_selection {
+    width: 23rem;
+  }
+
+  .CreatePage .urgency_box {
+    align-items: center;
+  }
+
+  #high_button {
+    width: 20rem;
+  }
+  #medium_button {
+    width: 20rem;
+  }
+
+  #low_button {
+    width: 20rem;
+  }
+}

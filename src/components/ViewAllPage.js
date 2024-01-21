@@ -1,14 +1,12 @@
 import { React, useEffect, useContext } from "react";
 import "./ViewAllPage.css";
 import { TaskContext } from "../context/TaskContext";
-import { useNavigate } from "react-router-dom";
 
 import Tasks from "../apis/Tasks";
 import ViewAllCard from "./UI/viewall/ViewAllCard";
 
 function ViewAllPage() {
   const { tasks, setTasks, onUpdateTaskCompletion } = useContext(TaskContext);
-  let navigate = useNavigate();
   //read
   useEffect(() => {
     (async () => {

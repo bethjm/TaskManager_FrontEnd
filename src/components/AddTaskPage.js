@@ -1,18 +1,39 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+
 import "./AddTaskPage.css";
 
 import Tasks from "../apis/Tasks";
-import PrimaryButton from "./UI/buttons/PrimaryButton";
+import CheckBox from "./UI/images/checkbox.png";
+import NoCheck from "./UI/images/non_checkbox.png";
 
-function AddTaskPage() {
+function AddTaskPage({ setShowNavBar }) {
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
   const [taskUrgency, setTaskUrgency] = useState("");
   const [taskDueDate, setTaskDueDate] = useState("");
   const [taskCompleted, setTaskCompleted] = useState(false);
 
+  //hides the nav bar
+  useEffect(() => {
+    setShowNavBar(false);
+    return () => {
+      setShowNavBar(true);
+    };
+  }, [setShowNavBar]);
+
+  const navigation = useNavigate();
+
+  //submits the info then brings to tasks page
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    //this checks to make sure feilds are filled out
+    if (!taskName || !taskDescription || !taskDueDate || !taskUrgency) {
+      alert("Please fill in all required fields.");
+      return;
+    }
+
     try {
       const response = await Tasks.post(Tasks.baseURL, {
         name: taskName,
@@ -21,6 +42,8 @@ function AddTaskPage() {
         due_date: taskDueDate,
         completed: taskCompleted,
       });
+
+      navigation("/");
 
       if (response.status === 201) {
         console.log("Task created successfully!");
@@ -38,49 +61,73 @@ function AddTaskPage() {
 
   return (
     <div className="CreatePage">
+      <h2>ADD ITEM</h2>
+      <hr />
       <div className="CreatePage_Container">
-        <label>Name:</label>
         <input
+          className="taskName"
+          placeholder="Title"
           type="text"
           value={taskName}
           onChange={(e) => setTaskName(e.target.value)}
         />
 
-        <label>Description:</label>
         <textarea
+          className="desc"
+          placeholder="Description"
           type="text"
           value={taskDescription}
           onChange={(e) => setTaskDescription(e.target.value)}
         />
 
-        <label>Urgency:</label>
-        <select
-          value={taskUrgency}
-          onChange={(e) => setTaskUrgency(e.target.value)}
-        >
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select>
+        <div className="due_date">
+          <label>Date:</label>
+          <input
+            className="date_selection"
+            type="date"
+            value={taskDueDate}
+            onChange={(e) => setTaskDueDate(e.target.value)}
+          />
+        </div>
 
-        <label>Due Date:</label>
-        <input
-          type="date"
-          value={taskDueDate}
-          onChange={(e) => setTaskDueDate(e.target.value)}
-        />
+        <label id="urgency_title">Urgency:</label>
+        <div className="urgency_box">
+          <button
+            id="high_button"
+            type="button"
+            onClick={() => setTaskUrgency("High")}
+          >
+            High
+          </button>
+          <button
+            id="medium_button"
+            type="button"
+            onClick={() => setTaskUrgency("Medium")}
+          >
+            Medium
+          </button>
+          <button
+            id="low_button"
+            type="button"
+            onClick={() => setTaskUrgency("Low")}
+          >
+            Low
+          </button>
+        </div>
+        <label id="completed_title">Completed:</label>
+        <div className="completed_box">
+          <img
+            id="checked_box"
+            src={CheckBox}
+            checked={taskCompleted}
+            onChange={(e) => setTaskCompleted(e.target.checked)}
+          />
+          <img src={NoCheck} />
+        </div>
 
-        <label>Completed:</label>
-        <input
-          type="checkbox"
-          checked={taskCompleted}
-          onChange={(e) => setTaskCompleted(e.target.checked)}
-        />
-
-        <button type="submit" onClick={handleSubmit}>
-          create
+        <button className="submit_button" type="submit" onClick={handleSubmit}>
+          ADD
         </button>
-        {/* <PrimaryButton onClick={handleCreateTask}>Create Task</PrimaryButton> */}
       </div>
     </div>
   );
