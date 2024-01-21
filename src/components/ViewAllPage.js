@@ -22,19 +22,6 @@ function ViewAllPage() {
     })();
   }, []);
 
-  // if (tasks.length >= 1) {
-  //   //storing the data in session storage
-  //   sessionStorage.setItem("key", "value");
-  //   console.log("MODAAAL");
-  //   //get the data
-  //   const storedValue = sessionStorage.getItem("key");
-  //   console.log("Stored Value:", storedValue);
-
-  //   //remove the data
-  //   sessionStorage.removeItem("key");
-  //   console.log("MODAAAL");
-  // }
-
   //delete
   const handleDeleteTask = async (id) => {
     try {
