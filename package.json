@@ -14,12 +14,13 @@
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
     "save-dev": "^0.0.1-security",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/preset-react": "^7.23.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "mocha",
+    "test": "npx jest",
     "eject": "react-scripts eject"
   },
   "browserslist": {
@@ -40,6 +41,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-react": "^7.23.3",
     "jest": "^27.5.1"
   }
 }
