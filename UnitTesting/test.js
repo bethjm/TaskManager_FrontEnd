@@ -1,4 +1,4 @@
-const formatDate = require("../UnitTesting/test");
+const formatDate = require("../src/components/UI/viewall/Unittesting");
 const { format } = require("date-fns");
 const { enUS } = require("date-fns/locale");
 
