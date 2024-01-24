@@ -9,7 +9,6 @@
     "axios": "^1.6.5",
     "chai": "^5.0.0",
     "date-fns": "^3.3.0",
-    "mocha": "^10.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.21.3",
@@ -22,12 +21,6 @@
     "build": "react-scripts build",
     "test": "mocha",
     "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
@@ -45,5 +38,8 @@
   "main": "index.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
 }
