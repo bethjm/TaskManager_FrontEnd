@@ -46,6 +46,7 @@ function ViewAllPage() {
       if (task.id === id) {
         return { ...task, completed: !task.completed };
       }
+      console.log(task);
       return task;
     });
 

@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Completed.css";
 
 function Completed({ children }) {
   return (

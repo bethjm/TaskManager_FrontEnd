@@ -65,6 +65,10 @@ function ViewAllCard({ tasks, onDeleteTask, onUpdateTask }) {
                       }
                     />
                   )}
+                  {console.log(
+                    "task completed coming from ViewAllCard",
+                    task.completed
+                  )}
                 </a>
                 <a className="item2">
                   <Header>

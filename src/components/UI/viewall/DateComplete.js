@@ -1,5 +1,4 @@
 import React from "react";
-// import "./Date.css";
 
 function DateComplete({ children }) {
   return (
